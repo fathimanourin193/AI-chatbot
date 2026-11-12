@@ -1,0 +1,36 @@
+IBM Technical Consultant - AI Integration Role Overview
+
+As a Technical Consultant specializing in AI Integration, professionals implement,
+configure, and customize AI-driven solutions that integrate seamlessly into
+enterprise applications and workflows. This role requires translating solution
+designs and architectural blueprints into working systems, ensuring secure,
+efficient, and compliant deployment of AI services, APIs, and orchestration layers.
+
+Key Responsibilities:
+1. Implement AI Solutions: Develop connectors, build Retrieval-Augmented Generation
+   (RAG) pipelines, and configure prompts and guardrails to integrate AI services
+   into enterprise applications and workflows.
+2. Collaborate with Stakeholders: Work closely with architects, data engineers,
+   and business stakeholders to validate requirements, deliver proofs of concept,
+   and harden solutions for production.
+3. Optimize Performance: Implement observability, performance tuning, and cost
+   optimization measures to ensure reliable and scalable AI solutions.
+4. Ensure Compliance: Deploy AI services, APIs, and orchestration layers in
+   compliance with organizational and regulatory standards.
+5. Deliver Solutions: Translate solution designs and architectural blueprints
+   into working systems, focusing on reliability, scalability, and responsible
+   AI principles throughout the delivery lifecycle.
+
+Required Education: Bachelor's Degree
+Preferred Education: Master's Degree
+
+Required Technical Expertise:
+- Exposure to API Integration
+- Experience with Workflow Automation and event-driven patterns
+- LLMOps Practices including observability and performance tuning
+- Secure Deployment experience
+
+This is a sample document for testing the RAG bot. Try asking questions like:
+"What are the key responsibilities of this role?"
+"What education is required?"
+"What is LLMOps?"
