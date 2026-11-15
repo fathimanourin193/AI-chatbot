@@ -1,14 +1,7 @@
 import os
-import google.generativeai as genai
+from google import genai
 
-api_key = os.environ.get("GEMINI_API_KEY")
-if not api_key:
-    print("ERROR: Set GEMINI_API_KEY first (see README).")
-    exit(1)
-
-genai.configure(api_key=api_key)
-
-print("Models available to your key that support generateContent:\n")
-for m in genai.list_models():
-    if "generateContent" in m.supported_generation_methods:
-        print(" -", m.name)
+client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+for m in client.models.list():
+    print(m.name)
+    
