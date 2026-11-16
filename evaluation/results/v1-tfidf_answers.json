@@ -1,0 +1,205 @@
+{
+  "tag": "v1-tfidf",
+  "document": "data/sample_doc.txt",
+  "top_k": 3,
+  "n_chunks": 5,
+  "summary": {
+    "exact": {
+      "n": 7,
+      "retrieval_hits": 7,
+      "retrieval_total": 7,
+      "answers_correct": 4
+    },
+    "paraphrase": {
+      "n": 6,
+      "retrieval_hits": 3,
+      "retrieval_total": 6,
+      "answers_correct": 3
+    },
+    "unanswerable": {
+      "n": 4,
+      "retrieval_hits": 0,
+      "retrieval_total": 0,
+      "answers_correct": 4
+    },
+    "whole_doc": {
+      "n": 2,
+      "retrieval_hits": 0,
+      "retrieval_total": 0,
+      "answers_correct": 0
+    },
+    "ALL": {
+      "n": 19,
+      "retrieval_hits": 10,
+      "retrieval_total": 13,
+      "answers_correct": 11
+    }
+  },
+  "results": [
+    {
+      "id": "e01",
+      "category": "exact",
+      "question": "What education is required?",
+      "n_chunks": 3,
+      "retrieval_hit": true,
+      "answer": "Based on the provided context, the required education is a Bachelor's Degree (and a Master's Degree is preferred).",
+      "answer_correct": true
+    },
+    {
+      "id": "e02",
+      "category": "exact",
+      "question": "What is the preferred education?",
+      "n_chunks": 2,
+      "retrieval_hit": true,
+      "answer": "The preferred education is a Master's Degree.",
+      "answer_correct": true
+    },
+    {
+      "id": "e03",
+      "category": "exact",
+      "question": "What are the key responsibilities of this role?",
+      "n_chunks": 3,
+      "retrieval_hit": true,
+      "answer": "I don't have enough information in the document to answer that. The section detailing the key responsibilities is cut off/incomplete.",
+      "answer_correct": false
+    },
+    {
+      "id": "e04",
+      "category": "exact",
+      "question": "What is LLMOps?",
+      "n_chunks": 2,
+      "retrieval_hit": true,
+      "answer": "I don't have enough information in the document to answer that.",
+      "answer_correct": false
+    },
+    {
+      "id": "e05",
+      "category": "exact",
+      "question": "Which responsibility involves cost optimization?",
+      "n_chunks": 1,
+      "retrieval_hit": true,
+      "answer": "Based on the provided context, the responsibility that involves cost optimization is **mize Performance** (Optimize Performance), which includes implementing observability, performance tuning, and cost optimization measures.",
+      "answer_correct": true
+    },
+    {
+      "id": "e06",
+      "category": "exact",
+      "question": "What technical expertise is required?",
+      "n_chunks": 3,
+      "retrieval_hit": true,
+      "answer": "Based on the provided context, the required technical expertise includes:\n\n- Exposure to API Integration\n- Experience with Workflow Automation and event-driven patterns\n- LLMOps Practices including observability and performance tuning\n- Secure Deployment experience",
+      "answer_correct": true
+    },
+    {
+      "id": "e07",
+      "category": "exact",
+      "question": "Is secure deployment experience required?",
+      "n_chunks": 3,
+      "retrieval_hit": true,
+      "answer": "ERROR: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.6-flash, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 34.43053597s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.6-flash'}, 'quotaValue': '5'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '34s'}]}}",
+      "answer_correct": false
+    },
+    {
+      "id": "p01",
+      "category": "paraphrase",
+      "question": "What degree do I need to apply?",
+      "n_chunks": 1,
+      "retrieval_hit": true,
+      "answer": "Based on the provided context, you need a Bachelor's Degree to apply (a Master's Degree is preferred).",
+      "answer_correct": true
+    },
+    {
+      "id": "p02",
+      "category": "paraphrase",
+      "question": "Is a postgraduate qualification an advantage?",
+      "n_chunks": 0,
+      "retrieval_hit": false,
+      "answer": "I couldn't find anything relevant in the document for that question.",
+      "answer_correct": false
+    },
+    {
+      "id": "p03",
+      "category": "paraphrase",
+      "question": "What skills should a candidate have?",
+      "n_chunks": 0,
+      "retrieval_hit": false,
+      "answer": "I couldn't find anything relevant in the document for that question.",
+      "answer_correct": false
+    },
+    {
+      "id": "p04",
+      "category": "paraphrase",
+      "question": "Who will the consultant work with day to day?",
+      "n_chunks": 2,
+      "retrieval_hit": true,
+      "answer": "Based on the provided context, the consultant will work closely with architects, data engineers, and business stakeholders.",
+      "answer_correct": true
+    },
+    {
+      "id": "p05",
+      "category": "paraphrase",
+      "question": "How must AI services be deployed to meet legal rules?",
+      "n_chunks": 3,
+      "retrieval_hit": true,
+      "answer": "Based on the provided context, AI services (along with APIs and orchestration layers) must be deployed in compliance with organizational and regulatory standards.",
+      "answer_correct": true
+    },
+    {
+      "id": "p06",
+      "category": "paraphrase",
+      "question": "What will I be building in this job?",
+      "n_chunks": 0,
+      "retrieval_hit": false,
+      "answer": "I couldn't find anything relevant in the document for that question.",
+      "answer_correct": false
+    },
+    {
+      "id": "u01",
+      "category": "unanswerable",
+      "question": "What is the salary for this role?",
+      "n_chunks": 3,
+      "answer": "I don't have enough information in the document to answer that.",
+      "answer_correct": true
+    },
+    {
+      "id": "u02",
+      "category": "unanswerable",
+      "question": "Where is this job located?",
+      "n_chunks": 0,
+      "answer": "I couldn't find anything relevant in the document for that question.",
+      "answer_correct": true
+    },
+    {
+      "id": "u03",
+      "category": "unanswerable",
+      "question": "How many years of experience are required?",
+      "n_chunks": 3,
+      "answer": "I don't have enough information in the document to answer that.",
+      "answer_correct": true
+    },
+    {
+      "id": "u04",
+      "category": "unanswerable",
+      "question": "What is the weather today?",
+      "n_chunks": 0,
+      "answer": "I couldn't find anything relevant in the document for that question.",
+      "answer_correct": true
+    },
+    {
+      "id": "w01",
+      "category": "whole_doc",
+      "question": "Summarize this document.",
+      "n_chunks": 1,
+      "answer": "Based on the provided document, here is a summary of the information included:\n\n* **Document Purpose:** It is a sample document used for testing a RAG bot.\n* **Required Education:** Bachelor's Degree (Master's Degree is preferred).\n* **Required Technical Expertise:** \n  * Exposure to API Integration\n  * Experience with Workflow Automation and event-driven patterns\n  * LLMOps Practices (including observability and performance tuning)\n  * Secure Deployment experience\n* **Other details:** The text includes incomplete fragments regarding responsibilities (\"es throughout the delivery lifecycle\") and sample test questions.",
+      "answer_correct": false
+    },
+    {
+      "id": "w02",
+      "category": "whole_doc",
+      "question": "Explain the important points.",
+      "n_chunks": 0,
+      "answer": "I couldn't find anything relevant in the document for that question.",
+      "answer_correct": false
+    }
+  ]
+}

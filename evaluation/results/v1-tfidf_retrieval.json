@@ -1,0 +1,162 @@
+{
+  "tag": "v1-tfidf",
+  "document": "data/sample_doc.txt",
+  "top_k": 3,
+  "n_chunks": 5,
+  "summary": {
+    "exact": {
+      "n": 7,
+      "retrieval_hits": 7,
+      "retrieval_total": 7
+    },
+    "paraphrase": {
+      "n": 6,
+      "retrieval_hits": 3,
+      "retrieval_total": 6
+    },
+    "unanswerable": {
+      "n": 4,
+      "retrieval_hits": 0,
+      "retrieval_total": 0
+    },
+    "whole_doc": {
+      "n": 2,
+      "retrieval_hits": 0,
+      "retrieval_total": 0
+    },
+    "ALL": {
+      "n": 19,
+      "retrieval_hits": 10,
+      "retrieval_total": 13
+    }
+  },
+  "results": [
+    {
+      "id": "e01",
+      "category": "exact",
+      "question": "What education is required?",
+      "n_chunks": 3,
+      "retrieval_hit": true
+    },
+    {
+      "id": "e02",
+      "category": "exact",
+      "question": "What is the preferred education?",
+      "n_chunks": 2,
+      "retrieval_hit": true
+    },
+    {
+      "id": "e03",
+      "category": "exact",
+      "question": "What are the key responsibilities of this role?",
+      "n_chunks": 3,
+      "retrieval_hit": true
+    },
+    {
+      "id": "e04",
+      "category": "exact",
+      "question": "What is LLMOps?",
+      "n_chunks": 2,
+      "retrieval_hit": true
+    },
+    {
+      "id": "e05",
+      "category": "exact",
+      "question": "Which responsibility involves cost optimization?",
+      "n_chunks": 1,
+      "retrieval_hit": true
+    },
+    {
+      "id": "e06",
+      "category": "exact",
+      "question": "What technical expertise is required?",
+      "n_chunks": 3,
+      "retrieval_hit": true
+    },
+    {
+      "id": "e07",
+      "category": "exact",
+      "question": "Is secure deployment experience required?",
+      "n_chunks": 3,
+      "retrieval_hit": true
+    },
+    {
+      "id": "p01",
+      "category": "paraphrase",
+      "question": "What degree do I need to apply?",
+      "n_chunks": 1,
+      "retrieval_hit": true
+    },
+    {
+      "id": "p02",
+      "category": "paraphrase",
+      "question": "Is a postgraduate qualification an advantage?",
+      "n_chunks": 0,
+      "retrieval_hit": false
+    },
+    {
+      "id": "p03",
+      "category": "paraphrase",
+      "question": "What skills should a candidate have?",
+      "n_chunks": 0,
+      "retrieval_hit": false
+    },
+    {
+      "id": "p04",
+      "category": "paraphrase",
+      "question": "Who will the consultant work with day to day?",
+      "n_chunks": 2,
+      "retrieval_hit": true
+    },
+    {
+      "id": "p05",
+      "category": "paraphrase",
+      "question": "How must AI services be deployed to meet legal rules?",
+      "n_chunks": 3,
+      "retrieval_hit": true
+    },
+    {
+      "id": "p06",
+      "category": "paraphrase",
+      "question": "What will I be building in this job?",
+      "n_chunks": 0,
+      "retrieval_hit": false
+    },
+    {
+      "id": "u01",
+      "category": "unanswerable",
+      "question": "What is the salary for this role?",
+      "n_chunks": 3
+    },
+    {
+      "id": "u02",
+      "category": "unanswerable",
+      "question": "Where is this job located?",
+      "n_chunks": 0
+    },
+    {
+      "id": "u03",
+      "category": "unanswerable",
+      "question": "How many years of experience are required?",
+      "n_chunks": 3
+    },
+    {
+      "id": "u04",
+      "category": "unanswerable",
+      "question": "What is the weather today?",
+      "n_chunks": 0
+    },
+    {
+      "id": "w01",
+      "category": "whole_doc",
+      "question": "Summarize this document.",
+      "n_chunks": 1
+    },
+    {
+      "id": "w02",
+      "category": "whole_doc",
+      "question": "Explain the important points.",
+      "n_chunks": 0
+    }
+  ]
+}
